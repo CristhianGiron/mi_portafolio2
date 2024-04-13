@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Retosta';
+  src: url('./assets/retosta/Retosta.otf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.market{
+  font-family: 'Retosta' !important;
+}
+.app{
+  background-image: url(./assets/bgDark.png);
+  background-repeat: no-repeat;
+  background-color: #040c1b
+}
+.appb{
+  background-image: url(./assets/bgLight.png);
+  background-repeat: no-repeat;
+  background-color: #ffffff
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilo para el icono SVG */
+.icono-svg-f {
+  fill: #3478ff; /* Color inicial del icono */
+  transition: fill 0.3s;
+  height: 17px;
+  width: 17px; /* Transición suave para el cambio de color */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Estilo para el contenedor div cuando se hace hover */
+.div-hover-f:hover .icono-svg-f {
+  fill: rgb(255, 255, 255); /* Cambiar el color del icono a azul */
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilo para el icono SVG */
+.icono-svg-t {
+  fill: #34b1ff; /* Color inicial del icono */
+  transition: fill 0.3s;
+  height: 25px;
+  width: 25px; /* Transición suave para el cambio de color */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilo para el contenedor div cuando se hace hover */
+.div-hover-t:hover .icono-svg-t {
+  fill: rgb(255, 255, 255); /* Cambiar el color del icono a azul */
+}
+
+/* Estilo para el icono SVG */
+.icono-svg-d {
+  fill: #ff34b5; /* Color inicial del icono */
+  transition: fill 0.3s;
+  height: 20px;
+  width: 20px; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el contenedor div cuando se hace hover */
+.div-hover-d:hover .icono-svg-d {
+  fill: rgb(255, 255, 255); /* Cambiar el color del icono a azul */
+}
+
+/* Estilo para el icono SVG */
+.icono-svg-l {
+  fill: #3467ff; /* Color inicial del icono */
+  transition: fill 0.3s;
+  height: 20px;
+  width: 20px; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el contenedor div cuando se hace hover */
+.div-hover-l:hover .icono-svg-l {
+  fill: rgb(255, 255, 255); /* Cambiar el color del icono a azul */
 }
