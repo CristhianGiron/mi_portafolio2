@@ -12,7 +12,7 @@ import cv from "../assets/curriculumVitae-Ejemplos.pdf"
 import {DevicePhoneMobileIcon, MapPinIcon, EnvelopeOpenIcon, CalendarDaysIcon, DocumentIcon } from '@heroicons/react/24/outline'
 import { useEffect, useRef, useState } from "react";
 export function CardLeft() {
-    const [isFixed, setIsFixed] = useState(false);
+    const [isFixed, setIsFixed] = useState(true);
     const [scroll, setScroll] = useState(null)
     const divRef = useRef(null);
     const divRefc = useRef(null);
