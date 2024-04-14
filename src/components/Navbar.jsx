@@ -152,7 +152,7 @@ export function Navigation({ onSelectedChange }) {
 
     return (
         <div>
-            <div className="h-32"></div>
+            <div className="lg:h-32 h-60"></div>
             <Navbar className="mx-auto max-w-full lg:px-32 py-3 dark:bg-[#191A19a9] bg-white  shadow-none border-none top-0 fixed rounded-none filter-none z-[1000]">
                 <div className="flex items-center justify-between text-blue-gray-900">
                     <Typography
