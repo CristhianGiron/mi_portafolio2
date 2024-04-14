@@ -9,9 +9,9 @@ import {
 import noImage from "../assets/nofoto.png"
 import cv from "../assets/curriculumVitae-Ejemplos.pdf"
 
-import {DevicePhoneMobileIcon, MapPinIcon, EnvelopeOpenIcon, CalendarDaysIcon, DocumentIcon } from '@heroicons/react/24/outline'
+import { DevicePhoneMobileIcon, MapPinIcon, EnvelopeOpenIcon, CalendarDaysIcon, DocumentIcon } from '@heroicons/react/24/outline'
 import { useEffect, useRef, useState } from "react";
-export function CardLeft() {
+export function CardLeft({onLoadChange}) {
     const [isFixed, setIsFixed] = useState(true);
     const [scroll, setScroll] = useState(null)
     const divRef = useRef(null);
@@ -47,16 +47,20 @@ export function CardLeft() {
         };
     }, []);
 
+    const handleOnLoad = () => {
+        onLoadChange(true)
+   
+    }
 
 
     return (
-        <div ref={divRef} className="relative">
-            <Card ref={divRefc} className={`lg:w-[30vw] ${isFixed ? `lg:fixed ` : ''} dark:bg-[#191A19] bg-white`} style={{ marginTop: isFixed ? `${112}px` : `${scroll}px` }}>
+        <div onLoad={handleOnLoad} ref={divRef} className="relative">
+            <Card  ref={divRefc} className={`lg:w-[30vw] ${isFixed ? `lg:fixed ` : ''} dark:bg-[#191A19] bg-white`} style={{ marginTop: isFixed ? `${112}px` : `${scroll}px` }}>
                 <CardHeader
                     variant="gradient"
                     className="mb-4 grid h-auto place-items-center -mt-28 bg-transparent shadow-none"
                 >
-                    <img className={`rounded-3xl w-64 h-64 object-cover`} src={noImage} alt="" />
+                    <img  className={`rounded-3xl w-64 h-64 object-cover`} src="https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671122.jpg?w=740&t=st=1713074924~exp=1713075524~hmac=4fbb9052a7af0b1748846b8414ea6655bfb176a2eaade830e855d7c4fc51b6b1" alt="" />
 
                 </CardHeader>
                 <CardBody className="flex flex-col gap-4">
