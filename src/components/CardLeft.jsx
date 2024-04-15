@@ -5,13 +5,14 @@ import {
     CardFooter,
     Typography,
     Button,
+    Spinner,
 } from "@material-tailwind/react";
 import noImage from "../assets/nofoto.png"
 import cv from "../assets/curriculumVitae-Ejemplos.pdf"
 
 import { DevicePhoneMobileIcon, MapPinIcon, EnvelopeOpenIcon, CalendarDaysIcon, DocumentIcon } from '@heroicons/react/24/outline'
 import { useEffect, useRef, useState } from "react";
-export function CardLeft({onLoadChange}) {
+export function CardLeft({ onLoadChange }) {
     const [isFixed, setIsFixed] = useState(true);
     const [scroll, setScroll] = useState(null)
     const divRef = useRef(null);
@@ -46,21 +47,30 @@ export function CardLeft({onLoadChange}) {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
+    const [isLoading, setIsLoading] = useState(true);
     const handleOnLoad = () => {
-        onLoadChange(true)
-   
+        onLoadChange()
+        setIsLoading(false)
+
     }
 
 
     return (
         <div onLoad={handleOnLoad} ref={divRef} className="relative">
-            <Card  ref={divRefc} className={`lg:w-[30vw] ${isFixed ? `lg:fixed ` : ''} dark:bg-[#191A19] bg-white`} style={{ marginTop: isFixed ? `${112}px` : `${scroll}px` }}>
+            <Card ref={divRefc} className={`lg:w-[30vw] ${isFixed ? `lg:fixed ` : ''} dark:bg-[#191A19] bg-white`} style={{ marginTop: isFixed ? `${112}px` : `${scroll}px` }}>
                 <CardHeader
                     variant="gradient"
                     className="mb-4 grid h-auto place-items-center -mt-28 bg-transparent shadow-none"
                 >
-                    <img  className={`rounded-3xl w-64 h-64 object-cover`} src="https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671122.jpg?w=740&t=st=1713074924~exp=1713075524~hmac=4fbb9052a7af0b1748846b8414ea6655bfb176a2eaade830e855d7c4fc51b6b1" alt="" />
+
+                    <div className="w-64 h-64 bg-gray-700 rounded-3xl flex items-center justify-center">
+                        {isLoading &&
+                            <Spinner className="h-16 w-16 text-[#4E9F3D]" />
+
+                        }
+                        <img className={`rounded-3xl object-cover ${isLoading ? 'hidden' : 'block'}`} src="https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671122.jpg?w=740&t=st=1713074924~exp=1713075524~hmac=4fbb9052a7af0b1748846b8414ea6655bfb176a2eaade830e855d7c4fc51b6b1" alt="" />
+                    </div>
+
 
                 </CardHeader>
                 <CardBody className="flex flex-col gap-4">

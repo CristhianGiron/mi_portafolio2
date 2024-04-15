@@ -1,5 +1,5 @@
 import { HomeIcon, DocumentTextIcon, Squares2X2Icon, SwatchIcon, EnvelopeIcon, RectangleGroupIcon, PhotoIcon, CameraIcon, Cog8ToothIcon, CodeBracketIcon, PuzzlePieceIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
-import { Typography, Progress } from '@material-tailwind/react';
+import { Typography, Progress, Spinner } from '@material-tailwind/react';
 import VisibilitySensor from 'react-on-screen';
 import { useEffect, useState } from 'react';
 import 'animate.css';
@@ -116,10 +116,16 @@ export function About() {
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />
     };
+
+    const [isLoading, setIsLoading] = useState(true);
+    const handleOnLoad = () => {
+        setIsLoading(false)
+
+    }
     return (
         <VisibilitySensor partialVisibility>
             {({ isVisible }) =>
-                <div className={`p-10 ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
+                <div onLoad={handleOnLoad} className={`p-10 ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
                     <div className='text-5xl font-bold dark:text-[#00b88a] text-[#4E9F3D] flex items-center gap-4'>
                         About Me <div className='w-52 h-[2px] bg-gradient-to-r to-[#4E9F3D] from-[#00b88a]  '></div>
                     </div>
@@ -160,7 +166,13 @@ export function About() {
                             {client.map(({ img, index }) => (
                                 <div id={index} className='w-32 h-52 p-5'>
                                     <div className='w-full h-full flex items-center justify-center'>
-                                        <img src={img} alt="" />
+                                        {isLoading &&
+                                            <Spinner className="h-16 w-16 text-[#4E9F3D]" />
+                                        }
+                                        <div className={`${isLoading ? 'hidden' : 'block'}`}>
+                                            <img src={img} alt="" />
+                                        </div>
+
                                     </div>
                                 </div>
                             ))}

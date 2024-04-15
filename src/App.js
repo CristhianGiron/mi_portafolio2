@@ -55,16 +55,7 @@ function App() {
     <div>
 
       <div id={'miApp'} className={`transition-all duration-1000`} >
-        <div className={` ${isLoading ? 'overflow-hidden h-[100vh]' :''}`}>
 
-
-          {isLoading && (
-            <div className='w-full h-full bg-black bg-opacity-95 fixed z-[2000]'>
-              <div className="flex justify-center items-center h-full">
-                <Spinner className="h-16 w-16 text-[#4E9F3D]" />
-              </div>
-            </div>
-          )}
           <Navigation onSelectedChange={handleSelectedChange} />
           <div className='lg:p-10 grid grid-cols-1 lg:grid-cols-3 bg-transparent'>
 
@@ -104,8 +95,6 @@ function App() {
             </div>
 
           </div>
-
-        </div>
       </div>
     </div>
 
