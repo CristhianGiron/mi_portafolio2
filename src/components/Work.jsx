@@ -1,40 +1,198 @@
-import { PuzzlePieceIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
-import { Typography, Progress } from '@material-tailwind/react';
+import { PuzzlePieceIcon, AcademicCapIcon, DocumentPlusIcon, CodeBracketSquareIcon, CodeBracketIcon } from '@heroicons/react/24/outline'
+import { Typography, Progress, Spinner, Dialog, DialogHeader, DialogBody, DialogFooter, Button } from '@material-tailwind/react';
 import VisibilitySensor from 'react-on-screen';
 import 'animate.css';
+import { useState } from 'react';
 export function Work() {
+    const data = [
+        {
+            type: 'video',
+            title: 'Video',
+            description: 'Chul urina',
+            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F1.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F1.jpg&w=384&q=75',
+            project: 'Website',
+            languages: 'After Efects',
+            client: 'Envato',
+            preview: 'www.envato.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+        },
+        {
+            type: 'webdesign',
+            title: 'Web Design',
+            description: 'Chul urina',
+            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F2.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F2.jpg&w=384&q=75',
+            project: 'Website',
+            languages: 'HTML, CSS, Javascript',
+            client: 'Themeforest',
+            preview: 'themeforest.net',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+        },
+        {
+            type: 'logo',
+            title: 'Logo',
+            description: 'Chul urina',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png',
+            project: 'Website',
+            languages: 'Ilustrator',
+            client: 'Freepik',
+            preview: 'www.freepik.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+        },
+        {
+            type: 'graphicdesign',
+            title: 'UI/UX',
+            description: 'Chul urina',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
+        },
+        {
+            type: 'video',
+            title: 'Video',
+            description: 'Aura Dione',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
+        },
+        {
+            type: 'webdesign',
+            title: 'Web Design',
+            description: 'Chul urina',
+            image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
+        }
+    ]
+    const [isLoading, setIsLoading] = useState(true);
+    const handleOnLoad = () => {
+        setIsLoading(false)
+
+    }
+    const [selectedType, setSelectedType] = useState("All");
+
+    const filteredData = data.filter(item => selectedType === "All" || item.type === selectedType);
+
+    const getColumnData = (columnIndex) => {
+        const columnData = [];
+        for (let i = columnIndex; i < filteredData.length; i += 2) {
+            columnData.push(filteredData[i]);
+        }
+        return columnData;
+    };
+
+    const [open, setOpen] = useState(false);
+    const [dialogContent, setDialogContent] = useState([]); // Estado para almacenar el contenido dinámico del diálogo
+
+    const handleOpen = (content) => {
+        setDialogContent(content);
+        setOpen(!open);
+    };
     return (
         <VisibilitySensor partialVisibility>
             {({ isVisible }) =>
-                <div className={`p-10 ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
+                <div onLoad={handleOnLoad} className={`lg:p-10 p-5 ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
                     <div className='text-5xl font-bold dark:text-[#00b88a] text-[#4E9F3D] flex items-center gap-4'>
                         Work <div className='w-52 h-[2px] bg-gradient-to-r to-[#4E9F3D] from-[#00b88a]  '></div>
                     </div>
                     <div className='flex justify-end mt-10'>
                         <div className='h-[5rem] flex flex-wrap gap-6 text-gray-600 font-normal'>
-                            <div className='hover:text-[#00b88a] cursor-pointer'>
+                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "All" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("All")}>
                                 All
                             </div>
-                            <div className='hover:text-[#00b88a] cursor-pointer'>
+                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "video" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("video")}>
                                 Video
-                            </div> 
-                            <div className='hover:text-[#00b88a] cursor-pointer'>
+                            </div>
+                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "webdesign" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("webdesign")}>
                                 Web Design
                             </div>
-                            <div className='hover:text-[#00b88a] cursor-pointer'>
+                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "logo" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("logo")}>
                                 Logo
                             </div>
-                            <div className='hover:text-[#00b88a] cursor-pointer'>
+                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "graphicdesign" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("graphicdesign")}>
                                 Graphic Design
                             </div>
                         </div>
-                    </div>
-
-                    <div className='h-96'>
 
                     </div>
+                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-4 h-full">
+                        <div>
+                            {getColumnData(0).map(({ title, description, image, project, languages, client, preview, intro }, index) => (
+                                <div key={index} className={`mt-4 p-5 dark:border-gray-800 border-transparent dark:bg-transparent bg-[#fcf4ff] border-[2px] rounded-[12px] ${index % 2 === 0 ? 'lg:col-span-1 col-span-2' : 'lg:col-span-2 col-span-1'}`}>
+                                    <div className='rounded-[12px] overflow-hidden flex items-center justify-center'>
 
+                                        <Spinner className={`h-16 w-16 text-[#4E9F3D] ${isLoading ? 'block' : 'hidden'}`} />
 
+                                        <div className={`${isLoading ? 'hidden' : 'block'}`}>
+                                            <img onClick={() => handleOpen([title, project, languages, client, preview, intro, image])} className='w-full transition-all duration-300 hover:scale-110 cursor-pointer' src={image} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className='dark:text-gray-500 text-gray-700 flex gap-2 items-center pt-5 pb-2'>
+                                        {title}
+                                    </div>
+                                    <div onClick={() => handleOpen([title, project, languages, client, preview, intro, image])} className='font-bold text-xl dark:text-[#D8E9A8] text-[#1E5128] dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer'>
+                                        {description}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div>
+                            {getColumnData(1).map(({ title, description, image, project, languages, client, preview, intro }, index) => (
+                                <div key={index} className={`mt-4 p-5 dark:border-gray-800 border-transparent dark:bg-transparent bg-[#fcf4ff] border-[2px] rounded-[12px] ${index % 2 === 0 ? 'lg:col-span-1 col-span-2' : 'lg:col-span-2 col-span-1'}`}>
+                                    <div className='rounded-[12px] overflow-hidden flex items-center justify-center'>
+
+                                        <Spinner className={`h-16 w-16 text-[#4E9F3D] ${isLoading ? 'block' : 'hidden'}`} />
+
+                                        <div className={`${isLoading ? 'hidden' : 'block'}`}>
+                                            <img onClick={() => handleOpen([title, project, languages, client, preview, intro, image])} className='w-full transition-all duration-300 hover:scale-110 cursor-pointer' src={image} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className='dark:text-gray-500 text-gray-700 flex gap-2 items-center pt-5 pb-2'>
+                                        {title}
+                                    </div>
+                                    <div onClick={() => handleOpen([title, project, languages, client, preview, intro, image])} className='font-bold text-xl dark:text-[#D8E9A8] text-[#1E5128] dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer'>
+                                        {description}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <Dialog
+                        open={open}
+                        handler={handleOpen}
+                        size="lg"
+                        className='dark:bg-[#191A19] bg-white p-5'
+                    >
+                        <DialogHeader className= 'dark:text-[#00b88a] text-[#4E9F3D] flex items-center justify-center'>
+                            <div>
+                                {dialogContent[0]} Project
+                            </div>
+                            <div onClick={()=>handleOpen([])} className='absolute lg:-right-12 -right-4 rotate-45 font-normal text-5xl rounded-full border-2 dark:border-white border-black dark:text-white text-black h-10 w-10 flex items-center justify-center transition-all duration-500 hover:rotate-90 cursor-pointer lg:-top-6 -top-2 lg:bg-transparent dark:bg-black bg-white'>
+                                +
+                            </div>
+                        </DialogHeader>
+                        <DialogBody className='h-[72vh]'>
+                            <div className='grid lg:grid-cols-2 grid-cols-1 dark:text-[#D8E9A8] text-[#1E5128] '>
+                                <div>
+                                    <div className='flex items-center gap-4 pb-4'>
+                                        <DocumentPlusIcon className='h-6 w-6'/>Project: {dialogContent[1]}
+                                    </div>
+                                    <div className='flex items-center gap-4'>
+                                       <CodeBracketIcon className='h-6 w-6'/> Languages: {dialogContent[2]}
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className='flex items-center gap-4 pb-4'>
+                                         Client: {dialogContent[3]}
+                                    </div>
+                                    <div className='flex items-center gap-4 pb-4'>
+                                        Preview: {dialogContent[4]}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='dark:text-[#D8E9A8] text-[#1E5128] mt-10'>
+                                {dialogContent[5]}
+                            </div>
+                            <div className=' mt-10 flex items-center justify-center'>
+                                <img className='object-cover h-64 bg-gray-200' src={dialogContent[6]} alt="" />
+                            </div>
+                        </DialogBody>
+
+                    </Dialog>
                 </div>
 
             }

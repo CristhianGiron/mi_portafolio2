@@ -7,7 +7,6 @@ import {
     Button,
     Spinner,
 } from "@material-tailwind/react";
-import noImage from "../assets/nofoto.png"
 import cv from "../assets/curriculumVitae-Ejemplos.pdf"
 
 import { DevicePhoneMobileIcon, MapPinIcon, EnvelopeOpenIcon, CalendarDaysIcon, DocumentIcon } from '@heroicons/react/24/outline'
@@ -63,12 +62,12 @@ export function CardLeft({ onLoadChange }) {
                     className="mb-4 grid h-auto place-items-center -mt-28 bg-transparent shadow-none"
                 >
 
-                    <div className="w-64 h-64 bg-gray-700 rounded-3xl flex items-center justify-center">
+                    <div className="w-64 h-64 dark:bg-white bg-blue-gray-50 rounded-3xl flex items-center justify-center">
                         {isLoading &&
                             <Spinner className="h-16 w-16 text-[#4E9F3D]" />
 
                         }
-                        <img className={`rounded-3xl object-cover ${isLoading ? 'hidden' : 'block'}`} src="https://img.freepik.com/psd-gratis/ilustracion-3d-avatar-o-perfil-humano_23-2150671122.jpg?w=740&t=st=1713074924~exp=1713075524~hmac=4fbb9052a7af0b1748846b8414ea6655bfb176a2eaade830e855d7c4fc51b6b1" alt="" />
+                        <img className={`rounded-3xl object-cover ${isLoading ? 'hidden' : 'block'}`} src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png" alt="" />
                     </div>
 
 
@@ -135,7 +134,7 @@ export function CardLeft({ onLoadChange }) {
                             </div>
                             <div>
                                 <div className="text-sm dark:text-gray-600">Phone</div>
-                                <div className="dark:text-[#D8E9A8] text-[#1E5128]">
+                                <div className="dark:text-[#D8E9A8] text-[#1E5128] dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer">
                                     +593 969 644 592
                                 </div>
                             </div>

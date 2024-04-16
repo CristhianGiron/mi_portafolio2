@@ -63,22 +63,22 @@ const data = [
 
 const client = [
     {
-        img: imagen //Reemplazar por las imagenes correctas
+        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
     },
     {
-        img: imagen //Reemplazar por las imagenes correctas
+        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
     },
     {
-        img: imagen //Reemplazar por las imagenes correctas
+        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
     },
     {
-        img: imagen //Reemplazar por las imagenes correctas
+        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
     },
     {
-        img: imagen //Reemplazar por las imagenes correctas
+        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
     },
     {
-        img: imagen //Reemplazar por las imagenes correctas
+        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
     },
 
 ]
@@ -125,7 +125,7 @@ export function About() {
     return (
         <VisibilitySensor partialVisibility>
             {({ isVisible }) =>
-                <div onLoad={handleOnLoad} className={`p-10 ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
+                <div onLoad={handleOnLoad} className={`lg:p-10 p-5 ${isVisible ? "animate__animated animate__fadeIn" : ""}`}>
                     <div className='text-5xl font-bold dark:text-[#00b88a] text-[#4E9F3D] flex items-center gap-4'>
                         About Me <div className='w-52 h-[2px] bg-gradient-to-r to-[#4E9F3D] from-[#00b88a]  '></div>
                     </div>

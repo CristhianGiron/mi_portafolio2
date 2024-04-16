@@ -158,12 +158,12 @@ export function Navigation({ onSelectedChange }) {
                     <Typography
                         as="a"
                         href="#"
-                        className="mr-4 cursor-pointer text-4xl font-bold market text-white flex"
+                        className="mr-4 cursor-pointer lg:text-4xl text-2xl font-bold market text-white flex"
                         style={gradientStyle}
                     >
 
-                        <img className="h-9 mr-1" src={icon} alt="" />
-                        <div>HG</div> <div className=""><div className="font-normal">Labs</div> <div className="w-[68px] h-1 bg-gradient-to-r from-[#4E9F3D] to-[#00b88a] rounded-full -mt-2"></div></div>
+                        <img className="lg:h-9 h-7 mr-1" src={icon} alt="" />
+                        <div>HG</div> <div className=""><div className="font-normal">Labs</div> <div className="lg:w-[65px] h-1 bg-gradient-to-r from-[#4E9F3D] to-[#00b88a] rounded-full -mt-2"></div></div>
                     </Typography>
 
                     <div className="flex gap-5">
