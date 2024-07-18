@@ -63,22 +63,22 @@ const data = [
 
 const client = [
     {
-        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
+        img: "https://bostami-nextjs.netlify.app/_ipx/w_256,q_75/%2Fimages%2Fslider%2Fbrand-1.png?url=%2Fimages%2Fslider%2Fbrand-1.png&w=256&q=75"
     },
     {
-        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
+        img: "https://bostami-nextjs.netlify.app/_ipx/w_256,q_75/%2Fimages%2Fslider%2Fbrand-2.png?url=%2Fimages%2Fslider%2Fbrand-2.png&w=256&q=75"
     },
     {
-        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
+        img: "https://bostami-nextjs.netlify.app/_ipx/w_256,q_75/%2Fimages%2Fslider%2Fbrand-3.png?url=%2Fimages%2Fslider%2Fbrand-3.png&w=256&q=75"
     },
     {
-        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
+        img: "https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fslider%2Fbrand-4.png?url=%2Fimages%2Fslider%2Fbrand-4.png&w=384&q=75"
     },
     {
-        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
+        img: "https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fslider%2Fbrand-5.png?url=%2Fimages%2Fslider%2Fbrand-5.png&w=384&q=75"
     },
     {
-        img: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png"
+        img: "https://bostami-nextjs.netlify.app/_ipx/w_256,q_75/%2Fimages%2Fslider%2Fbrand-2.png?url=%2Fimages%2Fslider%2Fbrand-2.png&w=256&q=75"
     },
 
 ]
@@ -107,14 +107,40 @@ export function About() {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
         speed: 3000,
         autoplaySpeed: 2000,
         cssEase: "linear",
         nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                initialSlide: 3
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3
+              }
+            }
+          ]
     };
 
     const [isLoading, setIsLoading] = useState(true);
@@ -161,16 +187,16 @@ export function About() {
                     <div className='mt-12 dark:text-[#D8E9A8] text-[#1E5128] text-4xl font-semibold'>
                         My Client!
                     </div>
-                    <div className="mt-5 dark:bg-[#1d1d1d] bg-blue-gray-50 h-52 rounded-[12px]">
+                    <div className="mt-5 dark:bg-[#1d1d1d] bg-blue-gray-50 h-40 rounded-[12px]">
                         <Slider {...settings}>
                             {client.map(({ img, index }) => (
-                                <div id={index} className='w-32 h-52 p-5'>
+                                <div id={index} className='w-32 h-40 p-5'>
                                     <div className='w-full h-full flex items-center justify-center'>
                                         {isLoading &&
                                             <Spinner className="h-16 w-16 text-[#4E9F3D]" />
                                         }
                                         <div className={`${isLoading ? 'hidden' : 'block'}`}>
-                                            <img src={img} alt="" />
+                                            <img className='w-20' src={img} alt="" />
                                         </div>
 
                                     </div>

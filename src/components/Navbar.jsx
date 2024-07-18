@@ -8,8 +8,7 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 
-import icon from "../assets/icono.svg"
-
+import icon from '../assets/dev.svg'
 function NavList({ onSelectedChange }) {
     const handleClick = (newValue) => {
         onSelectedChange(newValue);
@@ -158,12 +157,19 @@ export function Navigation({ onSelectedChange }) {
                     <Typography
                         as="a"
                         href="#"
-                        className="mr-4 cursor-pointer lg:text-4xl text-2xl font-bold market text-white flex"
-                        style={gradientStyle}
+                        className="mr-4 cursor-pointer text-2xl font-normal tracking-widest text-white flex uppercase"
+                        
                     >
 
-                        <img className="lg:h-9 h-7 mr-1" src={icon} alt="" />
-                        <div>HG</div> <div className=""><div className="font-normal">Labs</div> <div className="lg:w-[65px] h-1 bg-gradient-to-r from-[#4E9F3D] to-[#00b88a] rounded-full -mt-2"></div></div>
+                        
+                        Cristhian
+                        
+                        <span className="text-green-400 font-extrabold tracking-normal">
+                            Gir
+                            
+                        </span>
+                        <span className="flex justify-center"><img src={icon} className="w-5" alt="" /></span>
+                        <span className="text-green-400 font-extrabold tracking-normal">n</span>
                     </Typography>
 
                     <div className="flex gap-5">

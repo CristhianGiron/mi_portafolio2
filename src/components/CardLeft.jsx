@@ -67,7 +67,7 @@ export function CardLeft({ onLoadChange }) {
                             <Spinner className="h-16 w-16 text-[#4E9F3D]" />
 
                         }
-                        <img className={`rounded-3xl object-cover ${isLoading ? 'hidden' : 'block'}`} src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png" alt="" />
+                        <img className={`rounded-3xl object-cover ${isLoading ? 'hidden' : 'block'}`} src="https://lh5.googleusercontent.com/proxy/9vqIPeIeHQHyGEo43DlSgD-DUtidieclv56O6UoAcYNGPXGNnZwFJL2V7oSodehCB1YT28jit7pMSVjNTnrBOnlBxW0CiRmOeH22FlPockzEbfdQPHLkDMPcgMwWdNfVHF1r2QpUk6W_aY_J87A9lFtYKMHf8_xhkMB7l_4=w1200-h630-p-k-no-nu" alt="" />
                     </div>
 
 
@@ -134,9 +134,12 @@ export function CardLeft({ onLoadChange }) {
                             </div>
                             <div>
                                 <div className="text-sm dark:text-gray-600">Phone</div>
-                                <div className="dark:text-[#D8E9A8] text-[#1E5128] dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer">
-                                    +593 969 644 592
+                                <div>
+                                    <a href="tel:+593969644592" className="dark:text-[#D8E9A8] text-[#1E5128] dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer">
+                                        +593 969 644 592
+                                    </a>
                                 </div>
+
                             </div>
 
                         </div>
@@ -158,9 +161,12 @@ export function CardLeft({ onLoadChange }) {
                             </div>
                             <div>
                                 <div className="text-sm dark:text-gray-600">Email</div>
-                                <div className="dark:text-[#D8E9A8] text-[#1E5128] dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer">
-                                    cristhiang181998@gmail.com
+                                <div>
+                                    <a href="mailto:cristhiang181998@gmail.com" className="dark:text-[#D8E9A8] text-[#1E5128] dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer">
+                                        cristhiang181998@gmail.com
+                                    </a>
                                 </div>
+
                             </div>
 
                         </div>
@@ -181,7 +187,7 @@ export function CardLeft({ onLoadChange }) {
                 <CardFooter className="pt-0 flex justify-center">
 
                     <a href={cv} target="_blank" rel="noopener noreferrer">
-                        <Button className=" flex items-center gap-4 rounded-full h-14 w-56 bg-gradient-to-r from-[#4E9F3D] to-[#00b88a] hover:from-[#00b88a] hover:to-[#4E9F3D] bg-opacity-95 text-[#D8E9A8] normal-case text-xl font-normal">
+                        <Button className="flex items-center gap-4 rounded-full h-14 w-56 bg-gradient-to-r from-[#4E9F3D] to-[#00b88a] hover:from-[#00b88a] hover:to-[#4E9F3D] bg-opacity-95 text-[#D8E9A8] normal-case text-xl font-normal">
                             <DocumentIcon className="h-9 w-9" />
                             View CV
                         </Button>

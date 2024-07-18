@@ -31,7 +31,7 @@ export function Work() {
             type: 'logo',
             title: 'Logo',
             description: 'Chul urina',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png',
+            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F3.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F3.jpg&w=384&q=75',
             project: 'Website',
             languages: 'Ilustrator',
             client: 'Freepik',
@@ -42,19 +42,71 @@ export function Work() {
             type: 'graphicdesign',
             title: 'UI/UX',
             description: 'Chul urina',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
+            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F4.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F4.jpg&w=384&q=75',
+            project: "Website",
+            languages: "Photoshop, Figma",
+            client: 'Envato',
+            preview: 'www.envato.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
         },
         {
             type: 'video',
             title: 'Video',
             description: 'Aura Dione',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
-        },
+            image: 'https://bostami-nextjs.netlify.app/_next/image?url=%2Fimages%2Fwork_images%2Fsmall%2F5.jpg&w=384&q=75',
+            project: 'Website',
+            languages: 'After Efects',
+            client: 'Envato',
+            preview: 'www.envato.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+
+,        },
         {
             type: 'webdesign',
             title: 'Web Design',
             description: 'Chul urina',
-            image: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
+            image: 'https://bostami-nextjs.netlify.app/_next/image?url=%2Fimages%2Fwork_images%2Fsmall%2F6.jpg&w=384&q=75',
+            project: 'Website',
+            languages: 'Photoshop, Figma',
+            client: 'Envato',
+            preview: 'www.envato.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+        }
+        ,
+        {
+            type: 'webdesign',
+            title: 'Web Design',
+            description: 'Chul urina',
+            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F7.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F7.jpg&w=384&q=75',
+            project: 'Website',
+            languages: 'Photoshop, Figma',
+            client: 'Envato',
+            preview: 'www.envato.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+        }
+        ,
+        {
+            type: 'webdesign',
+            title: 'Web Design',
+            description: 'Chul urina',
+            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F8.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F8.jpg&w=384&q=75',
+            project: 'Website',
+            languages: 'html, css, javascript',
+            client: 'Envato',
+            preview: 'www.envato.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+        }
+        ,
+        {
+            type: 'webdesign',
+            title: 'Web Design',
+            description: 'Chul urina',
+            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F9.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F9.jpg&w=384&q=75',
+            project: 'Website',
+            languages: 'Photoshop, Figma',
+            client: 'Envato',
+            preview: 'www.envato.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
         }
     ]
     const [isLoading, setIsLoading] = useState(true);
@@ -165,8 +217,9 @@ export function Work() {
                                 +
                             </div>
                         </DialogHeader>
-                        <DialogBody className='h-[72vh]'>
-                            <div className='grid lg:grid-cols-2 grid-cols-1 dark:text-[#D8E9A8] text-[#1E5128] '>
+                        <DialogBody className='h-[72vh] overflow-y-scroll'>
+                            <div className='grid lg:grid-cols-2 grid-cols-1 darkAA.
+                            :text-[#D8E9A8] text-[#4E9F3D] '>
                                 <div>
                                     <div className='flex items-center gap-4 pb-4'>
                                         <DocumentPlusIcon className='h-6 w-6'/>Project: {dialogContent[1]}
@@ -187,8 +240,8 @@ export function Work() {
                             <div className='dark:text-[#D8E9A8] text-[#1E5128] mt-10'>
                                 {dialogContent[5]}
                             </div>
-                            <div className=' mt-10 flex items-center justify-center'>
-                                <img className='object-cover h-64 bg-gray-200' src={dialogContent[6]} alt="" />
+                            <div className='mt-10 flex items-center justify-center'>
+                                <img className='h-64 object-cover bg-gray-200' src={dialogContent[6]} alt="" />
                             </div>
                         </DialogBody>
 

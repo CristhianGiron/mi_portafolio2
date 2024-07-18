@@ -45,7 +45,7 @@ export function CardCorp(select) {
                 </div>
                 <div id='miDivY' className='h-16  rounded-b-[12px] dark:bg-black bg-blue-gray-50 dark:text-[#D8E9A8] text-gray-700 flex items-center justify-center'>
                     <div>
-                        © 2024 All Rights Reserved by ib-themes.
+                        Cristhian Girón © 2024 All Rights Reserved by ib-themes.
                     </div>
 
                 </div>

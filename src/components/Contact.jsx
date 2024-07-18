@@ -21,10 +21,13 @@ export function Contact() {
                                 <div className='dark:text-[#D8E9A8] text-[#1E5128] text-xl pb-3'>
                                     Phone:
                                 </div>
-                                <div className='text-xl dark:text-gray-400 text-gray-700'>
-                                    <div className='pb-3 cursor-pointer'>+452 666 386</div>
-                                    <div className='cursor-pointer'>+654 764 878</div>
-
+                                <div class='text-xl dark:text-gray-400 text-gray-700'>
+                                    <div class='pb-3'>
+                                        <a class='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer' href="tel:+452666386">+452 666 386</a>
+                                    </div>
+                                    <div>
+                                        <a class='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer' href="tel:+654764878">+654 764 878</a>
+                                    </div>
                                 </div>
                             </div>
 
@@ -38,9 +41,12 @@ export function Contact() {
                                     Email:
                                 </div>
                                 <div className='text-xl dark:text-gray-400 text-gray-700'>
-                                    <div className='pb-3 cursor-pointer'>ibthemes@gmail.com</div>
-                                    <div className='cursor-pointer'>mailto:xyz@abc.com</div>
-
+                                    <div className='pb-3'>
+                                        <a href="mailto:ibthemes@gmail.com" className='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer'>ibthemes@gmail.com</a>
+                                    </div>
+                                    <div>
+                                        <a href="mailto:xyz@abc.com" className='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer'>xyz@abc.com</a>
+                                    </div>
                                 </div>
                             </div>
 

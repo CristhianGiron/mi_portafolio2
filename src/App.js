@@ -5,7 +5,6 @@ import { CardLeft } from './components/CardLeft';
 import { CardCorp } from './components/Body';
 import { useEffect, useState } from 'react';
 import { HomeIcon, DocumentTextIcon, Squares2X2Icon, SwatchIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
-import { Spinner } from '@material-tailwind/react';
 function App() {
   const [select, setSelect] = useState(0)
   const handleSelectedChange = (newValue) => {
