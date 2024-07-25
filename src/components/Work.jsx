@@ -60,7 +60,8 @@ export function Work() {
             preview: 'www.envato.com',
             intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
 
-,        },
+            ,
+        },
         {
             type: 'webdesign',
             title: 'Web Design',
@@ -118,6 +119,7 @@ export function Work() {
 
     const filteredData = data.filter(item => selectedType === "All" || item.type === selectedType);
 
+
     const getColumnData = (columnIndex) => {
         const columnData = [];
         for (let i = columnIndex; i < filteredData.length; i += 2) {
@@ -141,7 +143,7 @@ export function Work() {
                         Work <div className='w-52 h-[2px] bg-gradient-to-r to-[#4E9F3D] from-[#00b88a]  '></div>
                     </div>
                     <div className='flex justify-end mt-10'>
-                        <div className='h-[5rem] flex flex-wrap gap-6 text-gray-600 font-normal'>
+                        <div className='h-[3rem] flex flex-wrap gap-6 text-gray-600 font-normal'>
                             <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "All" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("All")}>
                                 All
                             </div>
@@ -157,9 +159,15 @@ export function Work() {
                             <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "graphicdesign" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("graphicdesign")}>
                                 Graphic Design
                             </div>
+
+
                         </div>
 
                     </div>
+                    <div className='flex justify-end'>
+                        <div className='dark:text-gray-500 dark:bg-gray-800 bg-gray-300 text-gray-700 text-xs rounded-md text-center min-w-10'>{filteredData.length}</div>
+                    </div>
+
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-4 h-full">
                         <div>
                             {getColumnData(0).map(({ title, description, image, project, languages, client, preview, intro }, index) => (
@@ -209,11 +217,11 @@ export function Work() {
                         size="lg"
                         className='dark:bg-[#191A19] bg-white p-5'
                     >
-                        <DialogHeader className= 'dark:text-[#00b88a] text-[#4E9F3D] flex items-center justify-center'>
+                        <DialogHeader className='dark:text-[#00b88a] text-[#4E9F3D] flex items-center justify-center'>
                             <div>
                                 {dialogContent[0]} Project
                             </div>
-                            <div onClick={()=>handleOpen([])} className='absolute lg:-right-12 -right-4 rotate-45 font-normal text-5xl rounded-full border-2 dark:border-white border-black dark:text-white text-black h-10 w-10 flex items-center justify-center transition-all duration-500 hover:rotate-90 cursor-pointer lg:-top-6 -top-2 lg:bg-transparent dark:bg-black bg-white'>
+                            <div onClick={() => handleOpen([])} className='absolute lg:-right-12 -right-4 rotate-45 font-normal text-5xl rounded-full border-2 dark:border-white border-black dark:text-white text-black h-10 w-10 flex items-center justify-center transition-all duration-500 hover:rotate-90 cursor-pointer lg:-top-6 -top-2 lg:bg-transparent dark:bg-black bg-white'>
                                 +
                             </div>
                         </DialogHeader>
@@ -222,15 +230,15 @@ export function Work() {
                             :text-[#D8E9A8] text-[#4E9F3D] '>
                                 <div>
                                     <div className='flex items-center gap-4 pb-4'>
-                                        <DocumentPlusIcon className='h-6 w-6'/>Project: {dialogContent[1]}
+                                        <DocumentPlusIcon className='h-6 w-6' />Project: {dialogContent[1]}
                                     </div>
                                     <div className='flex items-center gap-4'>
-                                       <CodeBracketIcon className='h-6 w-6'/> Languages: {dialogContent[2]}
+                                        <CodeBracketIcon className='h-6 w-6' /> Languages: {dialogContent[2]}
                                     </div>
                                 </div>
                                 <div>
                                     <div className='flex items-center gap-4 pb-4'>
-                                         Client: {dialogContent[3]}
+                                        Client: {dialogContent[3]}
                                     </div>
                                     <div className='flex items-center gap-4 pb-4'>
                                         Preview: {dialogContent[4]}

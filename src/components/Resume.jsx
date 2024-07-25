@@ -2,6 +2,10 @@ import { PuzzlePieceIcon, AcademicCapIcon } from '@heroicons/react/24/outline'
 import { Typography, Progress } from '@material-tailwind/react';
 import VisibilitySensor from 'react-on-screen';
 import 'animate.css';
+import { useState } from 'react';
+import Popup from './Popup';
+import PieChart from './PieChart';
+import BarChart from './BarChart';
 export function Resume() {
 
     const datos = {
@@ -53,24 +57,41 @@ export function Resume() {
         {
             color: 'red',
             title: 'Web Design',
-            percentaje: '80'
+            percentaje: 80
         },
         {
             color: 'purple',
             title: 'Mobile App',
-            percentaje: '95'
+            percentaje: 95
         },
         {
             color: 'blue',
             title: 'Ilustrator',
-            percentaje: '65'
+            percentaje: 65
         },
         {
             color: 'pink',
             title: 'Photoshope',
-            percentaje: '75'
+            percentaje: 75
         },
     ]
+
+
+
+    const [popupPosition, setPopupPosition] = useState(null);
+    const [showPopup, setShowPopup] = useState(false);
+
+    const handleClick = (event) => {
+        const x = event.pageX;
+        const y = event.pageY;
+
+        setPopupPosition({ x, y });
+        setShowPopup(true);
+    };
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+    };
     return (
         <VisibilitySensor partialVisibility>
             {({ isVisible }) =>
@@ -131,8 +152,13 @@ export function Resume() {
                     </div>
                     <div className='grid lg:grid-cols-2 grid-cols-1 gap-8 mt-28 lg:-mb-10 -mb-5 p-10 pt-20 dark:bg-[#0f0f0f] bg-blue-gray-50'>
                         <div>
-                            <div className='dark:text-[#D8E9A8] text-[#1E5128] text-3xl pb-10'>
+                            <div className='dark:text-[#D8E9A8] text-[#1E5128] text-3xl pb-10 flex items-center gap-2'>
                                 Working Skills
+
+                                <div className='cursor-pointer rounded-[50%] border-white border-2 w-4 h-4 text-sm flex justify-center content-center items-center' onClick={handleClick}>
+                                    +
+                                </div>
+
                             </div>
                             {skills.map(({ color, title, percentaje }) => (
                                 <div className="w-full pb-6">
@@ -144,9 +170,37 @@ export function Resume() {
                                             {percentaje}%
                                         </Typography>
                                     </div>
-                                    <Progress value={50} color={color} className='h-[3px] bg-gray-400' />
+                                    <Progress value={percentaje} color={color} className='h-[3px] bg-gray-400' />
                                 </div>
                             ))}
+
+                            {showPopup && (
+                                <Popup
+                                    position={popupPosition}
+                                    
+                                    content={
+                                        <div>
+                                            <div className='dark:text-[#D8E9A8] text-gray-800 mb-5'>Working Skills</div>
+                                            <div className='lg:flex gap-4 items-end'>
+                                                
+                                                <BarChart data={skills} width={200} height={150} />
+
+                                                <div className='lg:mt-0 mt-5'>
+                                                    {skills.map(({ color, title }) => (
+                                                        <div className='flex gap-4 mb-2'>
+                                                            <div style={{ backgroundColor: color }} className=' h-5 w-5 rounded-md'> </div>
+                                                            <div className='dark:text-[#D8E9A8] text-gray-800'> {title}</div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    }
+                                    onClose={handleClosePopup}
+                                />
+                            )}
+
                         </div>
                         <div>
                             <div className='dark:text-[#D8E9A8] text-[#1E5128] text-3xl pb-10'>

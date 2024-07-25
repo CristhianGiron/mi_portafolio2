@@ -23,10 +23,10 @@ export function Contact() {
                                 </div>
                                 <div class='text-xl dark:text-gray-400 text-gray-700'>
                                     <div class='pb-3'>
-                                        <a class='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer' href="tel:+452666386">+452 666 386</a>
+                                        <a class='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer' href="tel:+452666386">+593 969 644 592</a>
                                     </div>
                                     <div>
-                                        <a class='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer' href="tel:+654764878">+654 764 878</a>
+                                        <a class='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer' href="tel:+654764878">+593 764 878 854</a>
                                     </div>
                                 </div>
                             </div>
@@ -42,10 +42,10 @@ export function Contact() {
                                 </div>
                                 <div className='text-xl dark:text-gray-400 text-gray-700'>
                                     <div className='pb-3'>
-                                        <a href="mailto:ibthemes@gmail.com" className='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer'>ibthemes@gmail.com</a>
+                                        <a href="mailto:ibthemes@gmail.com" className='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer'>cristhiang181998@gmail.com</a>
                                     </div>
                                     <div>
-                                        <a href="mailto:xyz@abc.com" className='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer'>xyz@abc.com</a>
+                                        <a href="mailto:xyz@abc.com" className='dark:hover:text-[#00b88a] hover:text-[#00b88a] cursor-pointer'>cristhian.giron@unl.edu.ec</a>
                                     </div>
                                 </div>
                             </div>
