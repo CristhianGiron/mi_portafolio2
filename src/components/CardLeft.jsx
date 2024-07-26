@@ -78,7 +78,7 @@ export function CardLeft({ onLoadChange }) {
                     </Typography>
                     <div className="flex items-center justify-center">
                         <div className="dark:bg-[#1d1d1d] bg-white p-2 pl-4 pr-4 rounded-[12px] text-gray-500">
-                            Ui/Ux Designer
+                            Developer
                         </div>
                     </div>
                     <div className="flex gap-4 justify-center">

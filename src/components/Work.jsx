@@ -3,9 +3,16 @@ import { Typography, Progress, Spinner, Dialog, DialogHeader, DialogBody, Dialog
 import VisibilitySensor from 'react-on-screen';
 import 'animate.css';
 import { useState } from 'react';
+import CarLeader from '../assets/work/CarLeader.png'
+import MenuCrysis from '../assets/work/MenuCrysis.png'
+import Statistic from '../assets/work/Estatistic.png'
+import GameQuestions from '../assets/work/GameQuestions.png'
+import InvFact from '../assets/work/InvFact.png'
+import Blog from '../assets/work/Blog.png'
+import BookLife from '../assets/work/BookLife.png'
 export function Work() {
     const data = [
-        {
+        /*{
             type: 'video',
             title: 'Video',
             description: 'Chul urina',
@@ -15,40 +22,41 @@ export function Work() {
             client: 'Envato',
             preview: 'www.envato.com',
             intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+        },*/
+        {
+            type: 'webdesign',
+            title: 'Web Design',
+            description: 'Car market',
+            image: CarLeader,
+            project: 'Website',
+            languages: 'React, HTML, CSS, Javascript',
+            client: 'Vectus',
+            preview: 'themeforest.net',
+            intro: 'Car market is a clean modern professional Car Dealer and Business HTML5 Template. You can Build your business site based on vectus which provides you a list of unlimited options and features. It’s Fully Responsive which can adopt any screen size. VECTUS is built on of best know grid system which is skeleton to make your life easy. Our team are working hard to save your time.'
+        },
+        {
+            type: 'desktop',
+            title: 'App Desktop',
+            description: 'StatCalc Electron',
+            image: Statistic,
+            project: 'Statistic Calculator',
+            languages: 'Electron, React, Javascrip, HTML, CSS',
+            client: 'Personal',
+            preview: 'www.freepik.com',
+            intro: 'This project is a statistics calculator developed with Electron, which allows you to enter data and automatically calculate statistical values ​​such as mean, median, mode, range and amplitude. The application also generates a frequency table and a bar graph to visualize the distribution of the data, offering an interactive and visually attractive tool for statistical analysis.'
         },
         {
             type: 'webdesign',
             title: 'Web Design',
-            description: 'Chul urina',
-            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F2.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F2.jpg&w=384&q=75',
-            project: 'Website',
-            languages: 'HTML, CSS, Javascript',
-            client: 'Themeforest',
-            preview: 'themeforest.net',
-            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
-        },
-        {
-            type: 'logo',
-            title: 'Logo',
-            description: 'Chul urina',
-            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F3.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F3.jpg&w=384&q=75',
-            project: 'Website',
-            languages: 'Ilustrator',
-            client: 'Freepik',
-            preview: 'www.freepik.com',
-            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
-        },
-        {
-            type: 'graphicdesign',
-            title: 'UI/UX',
-            description: 'Chul urina',
-            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F4.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F4.jpg&w=384&q=75',
+            description: 'BookLife',
+            image: BookLife,
             project: "Website",
-            languages: "Photoshop, Figma",
+            languages: "React, Javascript, HTML, CSS",
             client: 'Envato',
             preview: 'www.envato.com',
             intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
         },
+        /*
         {
             type: 'video',
             title: 'Video',
@@ -61,14 +69,38 @@ export function Work() {
             intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
 
             ,
-        },
+        },*/
         {
             type: 'webdesign',
             title: 'Web Design',
-            description: 'Chul urina',
-            image: 'https://bostami-nextjs.netlify.app/_next/image?url=%2Fimages%2Fwork_images%2Fsmall%2F6.jpg&w=384&q=75',
+            description: 'Crysis Interface Reborn',
+            image: MenuCrysis,
             project: 'Website',
-            languages: 'Photoshop, Figma',
+            languages: 'React, Javascript, HTML, CSS',
+            client: 'Personal',
+            preview: 'www.envato.com',
+            intro: 'This project consists of recreating the Crysis 3 game menu, faithfully replicating its graphical interface, interactive elements and visual aesthetics. Includes options such as "New Campaign", "Load" and "Tutorial", as well as detailed statistics of the player´s progress. The goal is to achieve high visual fidelity and create a fluid interactive experience, providing an educational platform to learn about interface design and video game development, as well as to enjoy a nostalgic and entertaining project.'
+        }
+        ,
+        {
+            type: 'webdesign',
+            title: 'Web Design',
+            description: 'Game Questions',
+            image: GameQuestions,
+            project: 'Website',
+            languages: 'React, Javascript, HTML, CSS',
+            client: 'Envato',
+            preview: 'www.envato.com',
+            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
+        }
+        ,
+        {
+            type: 'desktop',
+            title: 'App Desktop',
+            description: 'InvFact',
+            image: InvFact,
+            project: 'Inventary and billing',
+            languages: 'Electron, React, html, css, javascript',
             client: 'Envato',
             preview: 'www.envato.com',
             intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
@@ -77,34 +109,10 @@ export function Work() {
         {
             type: 'webdesign',
             title: 'Web Design',
-            description: 'Chul urina',
-            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F7.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F7.jpg&w=384&q=75',
+            description: 'Blog',
+            image: Blog,
             project: 'Website',
-            languages: 'Photoshop, Figma',
-            client: 'Envato',
-            preview: 'www.envato.com',
-            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
-        }
-        ,
-        {
-            type: 'webdesign',
-            title: 'Web Design',
-            description: 'Chul urina',
-            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F8.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F8.jpg&w=384&q=75',
-            project: 'Website',
-            languages: 'html, css, javascript',
-            client: 'Envato',
-            preview: 'www.envato.com',
-            intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
-        }
-        ,
-        {
-            type: 'webdesign',
-            title: 'Web Design',
-            description: 'Chul urina',
-            image: 'https://bostami-nextjs.netlify.app/_ipx/w_384,q_75/%2Fimages%2Fwork_images%2Fsmall%2F9.jpg?url=%2Fimages%2Fwork_images%2Fsmall%2F9.jpg&w=384&q=75',
-            project: 'Website',
-            languages: 'Photoshop, Figma',
+            languages: 'Astro, Javascript, CSS, HTML',
             client: 'Envato',
             preview: 'www.envato.com',
             intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate non suscipit voluptatibus minima ullam maiores sequi nihil placeat error, vero eaque doloremque reiciendis amet pariatur consequuntur. Nostrum, dolore, amet eligendi ipsam enim quisquam, corrupti asperiores nihil excepturi aspernatur placeat iure.'
@@ -147,18 +155,24 @@ export function Work() {
                             <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "All" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("All")}>
                                 All
                             </div>
-                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "video" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("video")}>
-                                Video
-                            </div>
+                            {/**
+                                <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "video" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("video")}>
+                                    Video
+                                </div>
+                             */}
+                         
                             <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "webdesign" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("webdesign")}>
                                 Web Design
                             </div>
-                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "logo" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("logo")}>
-                                Logo
+                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "desktop" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("desktop")}>
+                                App Desktop
                             </div>
-                            <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "graphicdesign" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("graphicdesign")}>
-                                Graphic Design
-                            </div>
+                            {/**
+                                <div className={`hover:text-[#00b88a] cursor-pointer ${selectedType === "graphicdesign" ? 'text-[#00b88a]' : ''}`} onClick={() => setSelectedType("graphicdesign")}>
+                                    Graphic Design
+                                </div>
+                             */}
+
 
 
                         </div>
