@@ -157,11 +157,9 @@ export function Navigation({ onSelectedChange }) {
                     <Typography
                         as="a"
                         href="#"
-                        className="mr-4 cursor-pointer text-2xl font-normal tracking-widest text-white flex uppercase"
+                        className="mr-4 cursor-pointer text-2xl font-normal tracking-widest dark:text-white text-black flex uppercase"
                         
                     >
-
-                        
                         Cristhian
                         
                         <span className="text-green-400 font-extrabold tracking-normal">
