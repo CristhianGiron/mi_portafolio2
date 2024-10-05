@@ -11,6 +11,8 @@ import cv from "../assets/curriculumVitae-Ejemplos.pdf"
 
 import { DevicePhoneMobileIcon, MapPinIcon, EnvelopeOpenIcon, CalendarDaysIcon, DocumentIcon } from '@heroicons/react/24/outline'
 import { useEffect, useRef, useState } from "react";
+
+import Avatar from '../assets/Cristhian.jpg'
 export function CardLeft({ onLoadChange }) {
     const [isFixed, setIsFixed] = useState(true);
     const [scroll, setScroll] = useState(null)
@@ -67,7 +69,7 @@ export function CardLeft({ onLoadChange }) {
                             <Spinner className="h-16 w-16 text-[#4E9F3D]" />
 
                         }
-                        <img className={`rounded-3xl object-cover ${isLoading ? 'hidden' : 'block'}`} src="https://lh5.googleusercontent.com/proxy/9vqIPeIeHQHyGEo43DlSgD-DUtidieclv56O6UoAcYNGPXGNnZwFJL2V7oSodehCB1YT28jit7pMSVjNTnrBOnlBxW0CiRmOeH22FlPockzEbfdQPHLkDMPcgMwWdNfVHF1r2QpUk6W_aY_J87A9lFtYKMHf8_xhkMB7l_4=w1200-h630-p-k-no-nu" alt="" />
+                        <img className={`rounded-3xl object-cover ${isLoading ? 'hidden' : 'block'}`} src={Avatar} alt="" />
                     </div>
 
 

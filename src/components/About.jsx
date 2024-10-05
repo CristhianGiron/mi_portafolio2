@@ -156,9 +156,9 @@ export function About() {
                         About Me <div className='w-52 h-[2px] bg-gradient-to-r to-[#4E9F3D] from-[#00b88a]  '></div>
                     </div>
                     <div className='pt-7 dark:text-gray-500 text-gray-800'>
-                        <p>I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.<br /><br />
+                        <p>I'm a web developer from Ecuador, passionate about building digital experiences that are both functional and impactful. I specialize in solving complex problems with simple, efficient solutions, with expertise in both front-end and back-end development. <br/><br/>
 
-                            My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
+My goal is to bring your message and identity to life in the most creative way, turning ideas into reality through code. I've had the privilege of working on various web development projects, helping brands stand out and connect with their audiences effectively.</p>
                     </div>
                     <div className='mt-12 dark:text-[#D8E9A8] text-[#1E5128] text-4xl font-semibold'>
                         What I do!
