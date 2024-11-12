@@ -14,7 +14,7 @@ const data = [
     {
         icon: <SwatchIcon className='h-12 w-12' />,
         title: "Ui/Ux Design",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.",
+        description: "I'm a UI/UX designer passionate about creating visually engaging interfaces and seamless user experiences. I focus on intuitive designs that are both functional and aligned with the product's identity, ensuring users enjoy every interaction.",
         link: "",
         colorBg: "bg-[#fcf4ff]",
         color: "text-purple-300"
@@ -22,15 +22,15 @@ const data = [
     {
         icon: <RectangleGroupIcon className='h-12 w-12' />,
         title: "App Development",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.",
+        description: "I'm skilled in app development, focusing on building intuitive and efficient applications that provide a seamless user experience. From front-end interfaces to back-end functionality, I ensure that every aspect of the app works together to create a smooth, engaging, and high-performance product.",
         link: "",
         colorBg: "bg-[#fefaf0]",
         color: "text-amber-300"
     },
     {
         icon: <PhotoIcon className='h-12 w-12' />,
-        title: "Photography",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.",
+        title: "Microcontroller programming",
+        description: "I'm experienced in microcontroller programming, developing efficient and precise code to control hardware systems. From sensor integration to real-time processing, I specialize in creating optimized solutions that ensure seamless communication between devices and smooth execution of tasks in embedded systems.",
         link: "",
         colorBg: "bg-[#fcf4ff]",
         color: "text-indigo-300"

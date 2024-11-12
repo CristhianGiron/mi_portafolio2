@@ -186,7 +186,7 @@ export function Blog() {
                             <div className='text-white mt-5'>
                                 {dialogContent[4]}
                             </div>
-                            <div className='h-40 rounded-xl border-[#4E9F3D] border-2 mt-10 flex justify-between'>
+                            <div className='h-auto rounded-xl border-[#4E9F3D] border-2 mt-10 lg:flex lg:justify-between'>
                                 <div className='w-36 p-3'>
                                     <img className='rounded-xl h-28' src="https://bostami-nextjs.netlify.app/images/about/about.jpg" alt="" />
                                 </div>
@@ -208,7 +208,7 @@ export function Blog() {
                             </div>
 
                             <div className='flex justify-end items-center mt-5 '>
-                                <div className='text-white font-xl mr-10 text-2xl'>Share: </div>
+                                <div className='text-white font-xl lg:mr-10 mr-3 text-2xl'>Share: </div>
                                 <div className="flex gap-4 justify-center">
                                     <div className="h-10 w-10 dark:bg-[#1d1d1d] bg-blue-gray-50 rounded-[12px] flex items-center justify-center hover:bg-gradient-to-r hover:to-[#4E9F3D] hover:from-[#00b88a]  div-hover-f cursor-pointer">
                                         <svg className="icono-svg-f" height="800px" width="800px" viewBox="0 0 290 290">
