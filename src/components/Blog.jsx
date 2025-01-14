@@ -208,7 +208,7 @@ export function Blog() {
                             </div>
 
                             <div className='flex justify-end items-center mt-5 '>
-                                <div className='text-white font-xl lg:mr-10 mr-3 text-2xl'>Share: </div>
+                                <div className='text-white font-xl lg:mr-10 mr-0 text-2xl'>Share: </div>
                                 <div className="flex gap-4 justify-center">
                                     <div className="h-10 w-10 dark:bg-[#1d1d1d] bg-blue-gray-50 rounded-[12px] flex items-center justify-center hover:bg-gradient-to-r hover:to-[#4E9F3D] hover:from-[#00b88a]  div-hover-f cursor-pointer">
                                         <svg className="icono-svg-f" height="800px" width="800px" viewBox="0 0 290 290">
