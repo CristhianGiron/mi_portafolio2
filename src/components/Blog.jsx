@@ -112,6 +112,7 @@ export function Blog() {
         setDialogContent(content);
         setOpen(!open);
     };
+    //ashgdh
     return (
         <VisibilitySensor partialVisibility>
             {({ isVisible }) =>

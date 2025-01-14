@@ -43,6 +43,7 @@ const data = [
         colorBg: "bg-[#fff4f4]",
         color: "text-red-300"
     },
+    //jashdgjagsdjg
     {
         icon: <Cog8ToothIcon className='h-12 w-12' />,
         title: "Managment",
