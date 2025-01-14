@@ -187,8 +187,8 @@ export function Blog() {
                                 {dialogContent[4]}
                             </div>
                             <div className='h-auto rounded-xl border-[#4E9F3D] border-2 mt-10 lg:flex lg:justify-between'>
-                                <div className='w-36 p-3'>
-                                    <img className='rounded-xl h-28' src="https://bostami-nextjs.netlify.app/images/about/about.jpg" alt="" />
+                                <div className='lg:w-36 lg:flex-none w-full p-3 flex justify-center'>
+                                    <img className='rounded-xl lg:h-28 h-72' src="https://bostami-nextjs.netlify.app/images/about/about.jpg" alt="" />
                                 </div>
                                 <div className='w-full p-5'>
                                     <div className='flex justify-between'>
